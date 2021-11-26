@@ -6,6 +6,7 @@ const connectDB = require("./config/db")
 
 require("dotenv").config()
 
+
 // 2. MIDDLEWARES
 app.use(express.static("public"))
 
@@ -18,8 +19,13 @@ app.use(express.urlencoded({ extended: true }))
 
 connectDB()
 
+
 // 3. RUTAS
 app.use("/", require("./routes/index"))
+
+app.use("/rooms", require("./routes/rooms"))
+
+
 
 
 // 4. SERVIDOR
