@@ -38,7 +38,8 @@ exports.signup = async (req, res) => {
     const regex =  /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/
 	if(!regex.test(password)){
 		res.render("signup", {
-			errorMessage: "Tu password debde de contener 6 caracteres, mínimo un númeroy una mayúscula"
+			errorMessage: 
+            
 		})
 		return
 	} 
